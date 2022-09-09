@@ -1,8 +1,8 @@
 import model.Product;
 import model.ProductRepo;
-
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -27,5 +27,7 @@ public class Main {
         ProductRepo productRepo = new ProductRepo();
 
         productRepo.showProduct(1);
+
+        Scanner scan = new Scanner(System.in);
     }
 }

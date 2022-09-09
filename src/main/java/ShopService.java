@@ -1,9 +1,16 @@
-import model.Product;
 import model.ProductRepo;
-
-import java.util.HashMap;
-import java.util.Map;
+import service.OrderRepo;
 
 public class ShopService {
+
+    private ProductRepo productRepo;
+    private OrderRepo orderRepo;
+
+    public ShopService(ProductRepo productRepo, OrderRepo orderRepo) {
+        this.productRepo = productRepo;
+        this.orderRepo = orderRepo;
+    }
+
+
 
 }
