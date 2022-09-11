@@ -7,6 +7,13 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please insert a Number...");
+
+        int choose = scan.next();
+
+
         Map<Integer, Product> products = new HashMap<>();
 
             Product product1 = new Product(1, "Shoes");
@@ -28,6 +35,5 @@ public class Main {
 
         productRepo.showProduct(1);
 
-        Scanner scan = new Scanner(System.in);
     }
 }
