@@ -5,13 +5,8 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
-
-
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Please insert a Number...");
-
-        int choose = scan.next();
 
 
         Map<Integer, Product> products = new HashMap<>();
@@ -31,9 +26,15 @@ public class Main {
             products.put(product6.getId(), product6);
 
 
-        ProductRepo productRepo = new ProductRepo();
 
-        productRepo.showProduct(1);
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please insert a Number...");
+
+        int choose = scan.nextInt();
+
+        ProductRepo productRepo = new ProductRepo(products);
+
+        productRepo.showProduct(choose);
 
     }
 }

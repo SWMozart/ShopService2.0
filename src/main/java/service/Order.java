@@ -1,12 +1,14 @@
 package service;
 
 import model.Product;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class Order {
     private int id;
-    private List<Product> products;
+    private List<Product> products = new ArrayList<>();
 
     public Order(int id, List<Product> products) {
         this.id = id;

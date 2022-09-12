@@ -21,4 +21,8 @@ public class ProductRepo {
 
         return foundAllProducts;
     }
+
+    public ProductRepo(Map<Integer, Product> products) {
+        this.products = products;
+    }
 }

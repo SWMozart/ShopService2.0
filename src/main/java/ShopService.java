@@ -5,6 +5,7 @@ import service.OrderRepo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 public class ShopService {
@@ -19,13 +20,13 @@ public class ShopService {
 
 
 
-    public Order orderProducts(List<String> productIds){
+    public Order orderProducts(List<Integer> productIds){
         List<Product> productsToOrder = new ArrayList<>();
-        for (String productId : productIds){
+        for (Integer productId : productIds){
             Product productToAdd = getProduct(productId);
             productsToOrder.add(productToAdd);
         }
-        String id = UUID.randomUUID().toString();
+        int id = productsToOrder.size()+1;
         return orderRepo.addOrder(new Order(id, productsToOrder));
     }
 
@@ -33,7 +34,7 @@ public class ShopService {
         return productRepo.showProduct(productId);
     }
 
-    public List<Order> listOrders(){
+    public Map<Integer, Order> Orders() {
         return orderRepo.showAllOrders();
     }
 
