@@ -18,11 +18,6 @@ public class OrderRepo {
         return foundOrders;
     }
 
-    //public Collection<Order> showAllOrders() {
-      //  return orders.values();
-
-  //  }
-
     public Order addOrder(Order newOrder) {
        return orders.put(newOrder.getId(), newOrder);
 

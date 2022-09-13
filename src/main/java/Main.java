@@ -1,6 +1,7 @@
 import model.Product;
 import model.ProductRepo;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -32,9 +33,14 @@ public class Main {
 
         int choose = scan.nextInt();
 
+
+
         ProductRepo productRepo = new ProductRepo(products);
 
         productRepo.showProduct(choose);
 
+        for (Product product: List) {
+            products.put(product.getId(), product);
+        }
     }
 }
